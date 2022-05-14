@@ -1,0 +1,20 @@
+.chat {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.contacts {
+    padding: 10px;
+}
+
+.dialogs {
+    padding: 10px;
+}
+
+.dialog {
+
+}
+
+.contacts a:active {
+    color: gold
+}

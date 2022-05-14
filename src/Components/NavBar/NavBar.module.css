@@ -1,0 +1,18 @@
+.nav {
+    grid-area: n;
+    background-color: orange;
+}
+
+.item {
+    color: white;
+    text-underline: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.active{
+    color:gold;
+}

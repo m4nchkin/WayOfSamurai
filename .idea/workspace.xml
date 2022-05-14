@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e652f893-29b5-4653-9c3b-d10864bbe599" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28IerudW268jUfIeGIXAzzyqenL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/WS/exams/my-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\WS\\projects\\it-incubator\\socialNetwork\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\Settings" />
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\News" />
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\Music" />
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components" />
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\Profile\MyPosts\Post" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\Profile" />
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\NavBar" />
+      <recent name="E:\WS\projects\it-incubator\socialNetwork\src\Components\Header" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e652f893-29b5-4653-9c3b-d10864bbe599" name="Changes" comment="" />
+      <created>1650908729275</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650908729275</updated>
+      <workItem from="1650908731548" duration="41000" />
+      <workItem from="1651258489679" duration="20000" />
+      <workItem from="1651258825822" duration="64000" />
+      <workItem from="1651258908403" duration="427000" />
+      <workItem from="1651259561686" duration="21000" />
+      <workItem from="1651341716580" duration="1866000" />
+      <workItem from="1651343639471" duration="18000" />
+      <workItem from="1651344793906" duration="5254000" />
+      <workItem from="1651350490091" duration="491000" />
+      <workItem from="1651406803442" duration="17000" />
+      <workItem from="1651407286854" duration="685000" />
+      <workItem from="1651416343207" duration="29000" />
+      <workItem from="1651779631219" duration="673000" />
+      <workItem from="1651859937486" duration="234000" />
+      <workItem from="1651863016677" duration="1503000" />
+      <workItem from="1651946063802" duration="136000" />
+      <workItem from="1651948223570" duration="7677000" />
+      <workItem from="1652014338878" duration="4142000" />
+      <workItem from="1652019196837" duration="559000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
