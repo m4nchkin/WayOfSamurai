@@ -1,23 +1,27 @@
 import React from 'react';
 import s from './NavBar.module.css'
 import {NavLink} from "react-router-dom";
+import {state} from "../redux/state";
+
+
 
 const NavBar = () => {
     return <nav className={s.nav}>
         <div className={s.item}>
-            <NavLink to='/Profile' className={navData => navData.isActive ? s.active : s.item}>Profile</NavLink>
+            <NavLink to='/Profile*/' className={navData => navData.isActive ? s.active : s.item}>Profile</NavLink>
         </div>
         <div className={s.item}>
-            <NavLink to='/Dialogs' className={navData => navData.isActive ? s.active : s.item}>Messages</NavLink>
+            <NavLink to='/Dialogs*/' className={navData => navData.isActive ? s.active : s.item}>Messages</NavLink>
         </div>
-        <div className={s.item}>
-            <NavLink to='/News' className={navData => navData.isActive ? s.active : s.item}>News</NavLink>
-        </div>
-        <div className={s.item}>
-            <NavLink to='/Music' className={navData => navData.isActive ? s.active : s.item}>Music</NavLink>
-        </div>
-        <div className={s.item}>
-            <NavLink to='/Settings' className={navData => navData.isActive ? s.active : s.item}>Settings</NavLink>
+        <div className={s.friends}>
+            <div>Friends</div>
+            <span>
+                {state.sideBar.map(el=>
+                    <img src={el.img}/>
+                )}
+                {state.sideBar.map(el=>
+                <div className={s.smallNames}>{el.name}</div>)}
+            </span>
         </div>
     </nav>
 }

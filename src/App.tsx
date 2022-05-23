@@ -6,24 +6,25 @@ import Profile from "./Components/Profile/Profile";
 import Header from "./Components/Header/Header";
 import {Dialogs} from "./Components/dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import {Music} from "./Components/Music/Music";
-import {News} from "./Components/News/News";
-import {Settings} from "./Components/Settings/Settings";
+import {state} from './Components/redux/state'
 
 
 const App = () => {
+
+    const posts = state.profilePage.posts
+    const messages = state.dialogsPage.messages
+    const dialogs = state.dialogsPage.dialogs
+
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <NavBar/>
+                <NavBar />
                 <div className={'app-wrapper-content'}>
                     <Routes>
-                        <Route path='/Dialogs*' element={<Dialogs/>}/>
-                        <Route path='/Profile' element={<Profile/>}/>
-                        <Route path='/Music' element={<Music/>}/>
-                        <Route path='/News' element={<News/>}/>
-                        <Route path='/Settings' element={<Settings/>}/>
+                        <Route path='/Profile*/' element={<Profile posts={posts}/>}/>
+                        <Route path='/Dialogs*/' element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
                     </Routes>
                 </div>
                 {/*<Profile/>*/}

@@ -1,6 +1,7 @@
 .chat {
     display: grid;
     grid-template-columns: 2fr 10fr;
+    /*grid-area: ;*/
 }
 
 .contacts {
@@ -18,3 +19,9 @@
 .contacts a:active {
     color: gold
 }
+.item img{
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+

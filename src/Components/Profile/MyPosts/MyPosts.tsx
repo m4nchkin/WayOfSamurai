@@ -1,19 +1,10 @@
 import React from 'react';
 import Post from "./Post/Post";
 import s from './MyPosts.module.css'
+import {ProfilePageType} from "../../redux/state";
 
-type postsDataProps = {
-    postsData:Array<ArrayPropsType>
-}
 
-type ArrayPropsType = {
-    id:number,
-    message:string,
-    likes:number
-}
-
-const MyPosts = (props:postsDataProps) => {
-
+const MyPosts = (props:ProfilePageType) => {
 
     return <div className={s.postsBlock}>
         <h3>My posts</h3>
@@ -27,8 +18,8 @@ const MyPosts = (props:postsDataProps) => {
         </div>
         <div className={s.posts}>
             {
-                props.postsData.map(el=>
-                    <Post id={el.id} message={el.message} likeCounter={el.likes}/>
+                props.posts.map(el=>
+                    <Post id={el.id} message={el.message} likes={el.likes}/>
                 )
             }
             {/*<Post id={messageData[0].id} message={messageData[0].message} likeCounter={messageData[0].likes}/>*/}

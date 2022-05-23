@@ -16,3 +16,16 @@ a:hover{
 .active{
     color:gold;
 }
+.friends{
+    font-size: 1.5em;
+}
+.friends img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 5px;
+}
+.smallNames{
+    font-size: 0.5em;
+    padding: 5px;
+}

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e652f893-29b5-4653-9c3b-d10864bbe599" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/src/Components/redux/state.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavBar/NavBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBar/NavBar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBar/NavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Profile/MyPosts/Post/Post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/MyPosts/Post/Post.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/dialogs/dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/dialogs/dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/WS/projects/it-incubator/socialNetwork/src/Components/dialogs/Message",
+    "last_opened_file_path": "E:/WS/projects/it-incubator/socialNetwork",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,7 +93,17 @@
       <workItem from="1652014338878" duration="4142000" />
       <workItem from="1652019196837" duration="559000" />
       <workItem from="1652558206097" duration="719000" />
-      <workItem from="1652640038582" duration="5295000" />
+      <workItem from="1652640038582" duration="5382000" />
+      <workItem from="1652725098302" duration="94000" />
+      <workItem from="1652726783937" duration="11314000" />
+      <workItem from="1652893753381" duration="4108000" />
+      <workItem from="1652899920971" duration="16000" />
+      <workItem from="1653073836777" duration="14000" />
+      <workItem from="1653076075384" duration="1140000" />
+      <workItem from="1653157216826" duration="624000" />
+      <workItem from="1653235735810" duration="605000" />
+      <workItem from="1653242114927" duration="9000" />
+      <workItem from="1653329587410" duration="4728000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1652558320758</created>
@@ -95,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652558320758</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1652648225221</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652648225221</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
