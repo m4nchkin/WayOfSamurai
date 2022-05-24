@@ -3,6 +3,7 @@ import s from './dialogs.module.css';
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Message} from "./Message/Message";
 import {DialogsPageType} from "../redux/state";
+import {MessageSender} from "./MessageSender/MessageSender";
 
 
 export const Dialogs = (props:DialogsPageType) => {
@@ -21,6 +22,7 @@ export const Dialogs = (props:DialogsPageType) => {
                     <Message id={el.id} text={el.text}/>
                 )
             }
+            <MessageSender/>
         </div>
     </div>
 }

@@ -1,4 +1,4 @@
-export type PostsType = {
+export type PostType = {
     id: number,
     message: string,
     likes: number
@@ -21,7 +21,7 @@ export type SideBarType = {
 }
 
 export type ProfilePageType = {
-    posts: Array<PostsType>
+    posts: Array<PostType>
 }
 
 export type DialogsPageType = {
@@ -34,6 +34,7 @@ export type RootStateType = {
     dialogsPage: DialogsPageType,
     sideBar: Array<SideBarType>
 }
+
 
 export let state: RootStateType = {
     profilePage: {
@@ -75,6 +76,14 @@ export let state: RootStateType = {
         }]
 }
 
+export const addPost = (innerText:string) => {
+    let obj:PostType = {
+        id:4,
+        message:innerText,
+        likes:0
+    }
+    return state.profilePage.posts.push(obj)
+}
 
 
 

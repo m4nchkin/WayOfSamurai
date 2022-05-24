@@ -6,24 +6,28 @@ import Profile from "./Components/Profile/Profile";
 import Header from "./Components/Header/Header";
 import {Dialogs} from "./Components/dialogs/Dialogs";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import {state} from './Components/redux/state'
+import {RootStateType} from './Components/redux/state'
 
+type AppPropsType = {
+    state: RootStateType
+    addPost1: (innerText:string) => void
+}
 
-const App = () => {
+const App = (props: AppPropsType) => {
 
-    const posts = state.profilePage.posts
-    const messages = state.dialogsPage.messages
-    const dialogs = state.dialogsPage.dialogs
-
+    const posts = props.state.profilePage.posts
+    const messages = props.state.dialogsPage.messages
+    const dialogs = props.state.dialogsPage.dialogs
+    const addPost = props.addPost1
 
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <NavBar />
+                <NavBar/>
                 <div className={'app-wrapper-content'}>
                     <Routes>
-                        <Route path='/Profile*/' element={<Profile posts={posts}/>}/>
+                        <Route path='/Profile*/' element={<Profile posts={posts} addPost={addPost}/>}/>
                         <Route path='/Dialogs*/' element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
                     </Routes>
                 </div>

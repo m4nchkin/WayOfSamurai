@@ -1,24 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Post from "./Post/Post";
 import s from './MyPosts.module.css'
-import {ProfilePageType} from "../../redux/state";
+import {PostType, ProfilePageType} from "../../redux/state";
 
+type MyPostsPropsType = {
+    posts: Array<PostType>
+    addPost: (innerText:string) => void
+}
 
-const MyPosts = (props:ProfilePageType) => {
+const MyPosts = (props: MyPostsPropsType) => {
+    const [one,setOne] = useState('')
+    // let textRef = React.createRef<HTMLTextAreaElement>()
+
+    const postAdder = () => {
+        props.addPost(one)
+        alert(one)
+    }
 
     return <div className={s.postsBlock}>
         <h3>My posts</h3>
         <div>
             <div>
-                <textarea></textarea>
+                <textarea value={one} onChange={e=>setOne(e.currentTarget.value)}></textarea>
             </div>
             <div>
-                <button>add post</button>
+                <button onClick={postAdder}>add post</button>
             </div>
         </div>
         <div className={s.posts}>
             {
-                props.posts.map(el=>
+                props.posts.map(el =>
                     <Post id={el.id} message={el.message} likes={el.likes}/>
                 )
             }

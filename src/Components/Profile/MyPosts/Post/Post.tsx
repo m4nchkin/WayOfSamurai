@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Post.module.css'
-import {PostsType} from "../../../redux/state";
+import {PostType} from "../../../redux/state";
 
 
-const Post = (props: PostsType) => {
+const Post = (props: PostType) => {
     return <div>
         <div className={s.item}>
             <img src='https://cdnimg.rg.ru/i/gallery/84f24d10/19_b6265e7a.jpg'/>
