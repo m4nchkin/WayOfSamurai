@@ -1,15 +1,17 @@
+import {render} from "../../Render";
+
 export type PostType = {
     id: number,
     message: string,
     likes: number
 }
 
-export type DialogsType = {
+export type DialogType = {
     id: number,
     name: string
 }
 
-export type MessagesType = {
+export type MessageType = {
     id: number,
     text: string
 }
@@ -25,8 +27,8 @@ export type ProfilePageType = {
 }
 
 export type DialogsPageType = {
-    dialogs: Array<DialogsType>,
-    messages: Array<MessagesType>
+    dialogs: Array<DialogType>,
+    messages: Array<MessageType>
 }
 
 export type RootStateType = {
@@ -82,7 +84,8 @@ export const addPost = (innerText:string) => {
         message:innerText,
         likes:0
     }
-    return state.profilePage.posts.push(obj)
+    state.profilePage.posts.push(obj)
+    render(state)
 }
 
 

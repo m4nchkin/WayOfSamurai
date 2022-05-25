@@ -2,11 +2,15 @@ import React from "react";
 import s from './dialogs.module.css';
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Message} from "./Message/Message";
-import {DialogsPageType} from "../redux/state";
 import {MessageSender} from "./MessageSender/MessageSender";
+import {DialogType, MessageType} from "../redux/state";
 
+type DialogsPropsType = {
+    messages: Array<MessageType>
+    dialogs: Array<DialogType>
+}
 
-export const Dialogs = (props:DialogsPageType) => {
+export const Dialogs = (props:DialogsPropsType) => {
 
     return <div className={s.chat}>
         <div className={s.contacts}>

@@ -9,19 +9,18 @@ type MyPostsPropsType = {
 }
 
 const MyPosts = (props: MyPostsPropsType) => {
-    const [one,setOne] = useState('')
+    const [post,setPost] = useState('')
     // let textRef = React.createRef<HTMLTextAreaElement>()
 
     const postAdder = () => {
-        props.addPost(one)
-        alert(one)
+        props.addPost(post)
     }
 
     return <div className={s.postsBlock}>
         <h3>My posts</h3>
         <div>
             <div>
-                <textarea value={one} onChange={e=>setOne(e.currentTarget.value)}></textarea>
+                <textarea value={post} onChange={e=>setPost(e.currentTarget.value)}></textarea>
             </div>
             <div>
                 <button onClick={postAdder}>add post</button>

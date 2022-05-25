@@ -10,7 +10,7 @@ import {RootStateType} from './Components/redux/state'
 
 type AppPropsType = {
     state: RootStateType
-    addPost1: (innerText:string) => void
+    addPost: (innerText: string) => void
 }
 
 const App = (props: AppPropsType) => {
@@ -18,7 +18,7 @@ const App = (props: AppPropsType) => {
     const posts = props.state.profilePage.posts
     const messages = props.state.dialogsPage.messages
     const dialogs = props.state.dialogsPage.dialogs
-    const addPost = props.addPost1
+    const addPost = props.addPost
 
     return (
         <BrowserRouter>
@@ -31,7 +31,6 @@ const App = (props: AppPropsType) => {
                         <Route path='/Dialogs*/' element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
                     </Routes>
                 </div>
-                {/*<Profile/>*/}
             </div>
         </BrowserRouter>
     );

@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export const MessageSender = () => {
-
-    let text = React.createRef<HTMLTextAreaElement>()
+    const [message,setMessage] = useState('')
 
     const Sender = () => {
-        alert(text.current?.value)
+        setMessage(message)
+        alert(message)
     }
 
     return (
         <>
-            <div><textarea ref={text}></textarea></div>
+            <div><textarea value={message} onChange={e=>setMessage(e.currentTarget.value)}></textarea></div>
             <div><button onClick={Sender}>Send</button></div>
         </>
     );
