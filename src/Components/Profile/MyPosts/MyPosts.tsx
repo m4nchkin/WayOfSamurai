@@ -1,26 +1,36 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import Post from "./Post/Post";
 import s from './MyPosts.module.css'
-import {PostType, ProfilePageType} from "../../redux/state";
+import {PostType} from "../../redux/state";
 
 type MyPostsPropsType = {
     posts: Array<PostType>
-    addPost: (innerText:string) => void
+    addPost: () => void
+    addNewPostText: (newPostText: string) => void
 }
 
 const MyPosts = (props: MyPostsPropsType) => {
-    const [post,setPost] = useState('')
+
+    // const post = props.newPostText
+    const [post, setPost] = useState('')
     // let textRef = React.createRef<HTMLTextAreaElement>()
 
     const postAdder = () => {
-        props.addPost(post)
+        props.addPost()
+        setPost('')
     }
 
+    const onChangeTextHandler = (e:ChangeEvent<HTMLTextAreaElement>) => {
+        setPost(e.currentTarget.value)
+        props.addNewPostText(post)
+    }
+    console.log(post)
+    console.log(props.posts)
     return <div className={s.postsBlock}>
         <h3>My posts</h3>
         <div>
             <div>
-                <textarea value={post} onChange={e=>setPost(e.currentTarget.value)}></textarea>
+                <textarea value={post} onChange={onChangeTextHandler}></textarea>
             </div>
             <div>
                 <button onClick={postAdder}>add post</button>
@@ -32,8 +42,6 @@ const MyPosts = (props: MyPostsPropsType) => {
                     <Post id={el.id} message={el.message} likes={el.likes}/>
                 )
             }
-            {/*<Post id={messageData[0].id} message={messageData[0].message} likeCounter={messageData[0].likes}/>*/}
-            {/*<Post id={messageData[1].id} message={messageData[1].message} likeCounter={messageData[1].likes}/>*/}
         </div>
     </div>
 }

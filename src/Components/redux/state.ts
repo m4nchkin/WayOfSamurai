@@ -1,4 +1,5 @@
 import {render} from "../../Render";
+import {logDOM} from "@testing-library/react";
 
 export type PostType = {
     id: number,
@@ -24,6 +25,7 @@ export type SideBarType = {
 
 export type ProfilePageType = {
     posts: Array<PostType>
+    newPostText: string
 }
 
 export type DialogsPageType = {
@@ -42,7 +44,8 @@ export let state: RootStateType = {
     profilePage: {
         posts: [{id: 1, message: 'Hi, how are you?', likes: 10},
             {id: 2, message: 'I started learning React', likes: 15},
-        ]
+        ],
+        newPostText: ''
     },
     dialogsPage: {
         dialogs: [{id: 1, name: 'Oleg'},
@@ -77,16 +80,19 @@ export let state: RootStateType = {
             name: 'Yanis'
         }]
 }
-
-export const addPost = (innerText:string) => {
-    let obj:PostType = {
-        id:4,
-        message:innerText,
-        likes:0
+export const addPost = () => {
+    let obj: PostType = {
+        id: 4,
+        message: state.profilePage.newPostText,
+        likes: 0
     }
     state.profilePage.posts.push(obj)
+    state.profilePage.newPostText = ''
     render(state)
 }
-
+export const addNewPostText = (newPostText: string) => {
+    state.profilePage.newPostText = newPostText
+    render(state)
+}
 
 
