@@ -15,14 +15,14 @@ export const Dialogs = (props:DialogsPropsType) => {
     return <div className={s.chat}>
         <div className={s.contacts}>
             {
-                props.dialogs.map(el =>
+                props.dialogs.map((el,key) =>
                     <DialogItem name={el.name} id={el.id}/>
                 )
             }
         </div>
         <div className={s.dialogs}>
             {
-                props.messages.map(el =>
+                props.messages.map((el,key) =>
                     <Message id={el.id} text={el.text}/>
                 )
             }

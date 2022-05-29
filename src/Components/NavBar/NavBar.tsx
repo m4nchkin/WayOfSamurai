@@ -16,11 +16,11 @@ const NavBar = () => {
         <div className={s.friends}>
             <div>Friends</div>
             <span>
-                {state.sideBar.map(el=>
+                {state.sideBar.map((el,key)=>
                     <img src={el.img}/>
                 )}
-                {state.sideBar.map(el=>
-                <div className={s.smallNames}>{el.name}</div>)}
+                {state.sideBar.map((el,key)=>
+                <div className={s.smallNames} >{el.name}</div>)}
             </span>
         </div>
     </nav>

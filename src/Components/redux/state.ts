@@ -1,5 +1,10 @@
-import {render} from "../../Render";
-import {logDOM} from "@testing-library/react";
+let renderChange = () => {
+    console.log('state was changed')
+}
+
+export const subscribe = (observer: () => void) => {
+    renderChange = observer
+}
 
 export type PostType = {
     id: number,
@@ -17,18 +22,18 @@ export type MessageType = {
     text: string
 }
 
-export type SideBarType = {
+type SideBarType = {
     id: number
     img: string
     name: string
 }
 
-export type ProfilePageType = {
+type ProfilePageType = {
     posts: Array<PostType>
     newPostText: string
 }
 
-export type DialogsPageType = {
+type DialogsPageType = {
     dialogs: Array<DialogType>,
     messages: Array<MessageType>
 }
@@ -38,7 +43,6 @@ export type RootStateType = {
     dialogsPage: DialogsPageType,
     sideBar: Array<SideBarType>
 }
-
 
 export let state: RootStateType = {
     profilePage: {
@@ -88,11 +92,11 @@ export const addPost = () => {
     }
     state.profilePage.posts.push(obj)
     state.profilePage.newPostText = ''
-    render(state)
+    renderChange()
 }
 export const addNewPostText = (newPostText: string) => {
     state.profilePage.newPostText = newPostText
-    render(state)
+    renderChange()
 }
 
 

@@ -24,8 +24,7 @@ const MyPosts = (props: MyPostsPropsType) => {
         setPost(e.currentTarget.value)
         props.addNewPostText(post)
     }
-    console.log(post)
-    console.log(props.posts)
+
     return <div className={s.postsBlock}>
         <h3>My posts</h3>
         <div>
@@ -38,7 +37,7 @@ const MyPosts = (props: MyPostsPropsType) => {
         </div>
         <div className={s.posts}>
             {
-                props.posts.map(el =>
+                props.posts.map((el,key) =>
                     <Post id={el.id} message={el.message} likes={el.likes}/>
                 )
             }
