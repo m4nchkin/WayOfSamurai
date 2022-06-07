@@ -1,28 +1,26 @@
 import React, {ChangeEvent, useState} from 'react';
 import Post from "./Post/Post";
 import s from './MyPosts.module.css'
-import {PostType} from "../../redux/state";
+import {ActionsTypes, addPostActionCreator, PostType, updateTextActionCreator} from "../../redux/state";
 
 type MyPostsPropsType = {
     posts: Array<PostType>
-    addPost: () => void
-    addNewPostText: (newPostText: string) => void
+    dispatch: (action: ActionsTypes) => void
 }
+
 
 const MyPosts = (props: MyPostsPropsType) => {
 
-    // const post = props.newPostText
     const [post, setPost] = useState('')
-    // let textRef = React.createRef<HTMLTextAreaElement>()
 
     const postAdder = () => {
-        props.addPost()
+        props.dispatch(addPostActionCreator())
         setPost('')
     }
 
     const onChangeTextHandler = (e:ChangeEvent<HTMLTextAreaElement>) => {
         setPost(e.currentTarget.value)
-        props.addNewPostText(post)
+        props.dispatch(updateTextActionCreator(post))
     }
 
     return <div className={s.postsBlock}>
@@ -37,7 +35,7 @@ const MyPosts = (props: MyPostsPropsType) => {
         </div>
         <div className={s.posts}>
             {
-                props.posts.map((el,key) =>
+                props.posts.map((el) =>
                     <Post id={el.id} message={el.message} likes={el.likes}/>
                 )
             }

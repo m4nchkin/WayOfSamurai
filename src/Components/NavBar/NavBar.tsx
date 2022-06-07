@@ -1,11 +1,13 @@
 import React from 'react';
 import s from './NavBar.module.css'
 import {NavLink} from "react-router-dom";
-import {state} from "../redux/state";
+import {storeType} from "../redux/state";
 
+type NavBarType = {
+    store:storeType
+}
 
-
-const NavBar = () => {
+const NavBar = (props:NavBarType) => {
     return <nav className={s.nav}>
         <div className={s.item}>
             <NavLink to='/Profile*/' className={navData => navData.isActive ? s.active : s.item}>Profile</NavLink>
@@ -16,10 +18,10 @@ const NavBar = () => {
         <div className={s.friends}>
             <div>Friends</div>
             <span>
-                {state.sideBar.map((el,key)=>
+                {props.store.getState().sideBar.map((el)=>
                     <img src={el.img}/>
                 )}
-                {state.sideBar.map((el,key)=>
+                {props.store.getState().sideBar.map((el)=>
                 <div className={s.smallNames} >{el.name}</div>)}
             </span>
         </div>
