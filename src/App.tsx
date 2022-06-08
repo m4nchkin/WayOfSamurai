@@ -32,9 +32,14 @@ const App = (props: AppPropsType) => {
                         <Route path='/Profile*/'
                                element={<Profile
                                    posts={posts}
-                                   dispatch={props.dispatch}
+                                   dispatch={props.dispatch.bind(state)}
                                />}/>
-                        <Route path='/Dialogs*/' element={<Dialogs messages={messages} dialogs={dialogs}/>}/>
+                        <Route path='/Dialogs*/'
+                               element={<Dialogs
+                                   messages={messages}
+                                   dialogs={dialogs}
+                                   dispatch={props.dispatch.bind(state)}
+                               />}/>
                     </Routes>
                 </div>
             </div>

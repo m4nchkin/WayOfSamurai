@@ -27,7 +27,8 @@ type ProfilePageType = {
 
 type DialogsPageType = {
     dialogs: Array<DialogType>,
-    messages: Array<MessageType>
+    messages: Array<MessageType>,
+    newMessage: string
 }
 
 type RootStateType = {
@@ -37,12 +38,28 @@ type RootStateType = {
 }
 
 export type ActionsTypes = AddPostActionType | ChangeNewPostTextActionType
+    | AddMessageActionType | AddMessageTextActionType
 
 export const addPostActionCreator = (): AddPostActionType => {
-    return {type:'ADD-POST'}
+    return {type: 'ADD-POST'}
 }
-export const updateTextActionCreator = (postText:string): ChangeNewPostTextActionType => {
-    return {type:'ADD-NEW-POST-TEXT',newPostText:postText}
+export const updateTextActionCreator = (postText: string): ChangeNewPostTextActionType => {
+    return {type: 'ADD-NEW-POST-TEXT', newPostText: postText}
+}
+export const addMessageActionCreator = (): AddMessageActionType => {
+    return {type: 'ADD-MESSAGE'}
+}
+export const addMessageTextActionCreator = (Message: string): AddMessageTextActionType => {
+    return {type: 'ADD-MESSAGE-TEXT', newMessage: Message}
+}
+
+type AddMessageActionType = {
+    type: 'ADD-MESSAGE'
+}
+
+type AddMessageTextActionType = {
+    type: 'ADD-MESSAGE-TEXT',
+    newMessage: string
 }
 
 type AddPostActionType = {
@@ -85,7 +102,8 @@ export const store: storeType = {
                 {id: 4, text: 'Fucking fuck'},
                 {id: 5, text: 'Fucking fuck fuck'},
                 {id: 6, text: 'Fucking fuck fuck fuck'}
-            ]
+            ],
+            newMessage: ''
         },
         sideBar: [
             {
@@ -105,6 +123,7 @@ export const store: storeType = {
             }]
     },
     _renderChange() {
+        debugger
         console.log('state was changed')
     },
     subscribe(observer) {
@@ -125,6 +144,16 @@ export const store: storeType = {
             this._renderChange()
         } else if (action.type === 'ADD-NEW-POST-TEXT') {
             this._state.profilePage.newPostText = action.newPostText
+            this._renderChange()
+        } else if (action.type === 'ADD-MESSAGE') {
+            let newMessage = {
+                id: 5,
+                text: this._state.dialogsPage.newMessage
+            }
+            this._state.dialogsPage.messages.push(newMessage)
+            this._renderChange()
+        }else if (action.type === 'ADD-MESSAGE-TEXT') {
+            this._state.dialogsPage.newMessage = action.newMessage
             this._renderChange()
         }
     }

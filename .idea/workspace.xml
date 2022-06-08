@@ -7,11 +7,9 @@
     <list default="true" id="e652f893-29b5-4653-9c3b-d10864bbe599" name="Changes" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBar/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/dialogs/MessageSender/MessageSender.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/dialogs/MessageSender/MessageSender.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/redux/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/redux/state.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,8 @@
       <workItem from="1654194973575" duration="137000" />
       <workItem from="1654372055953" duration="12000" />
       <workItem from="1654540040264" duration="6196000" />
-      <workItem from="1654626031185" duration="3671000" />
+      <workItem from="1654626031185" duration="4289000" />
+      <workItem from="1654714359973" duration="3742000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1652558320758</created>
@@ -163,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653841874171</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial Commit">
+      <created>1654630525698</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654630525698</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

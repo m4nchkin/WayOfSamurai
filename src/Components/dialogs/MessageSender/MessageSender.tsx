@@ -1,17 +1,30 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
+import {ActionsTypes, addMessageActionCreator, addMessageTextActionCreator} from "../../redux/state";
 
-export const MessageSender = () => {
-    const [message,setMessage] = useState('')
+type MessageSenderPropsType = {
+    dispatch: (action: ActionsTypes) => void
+}
+
+export const MessageSender = (props: MessageSenderPropsType) => {
+    const [message, setMessage] = useState('')
 
     const Sender = () => {
-        setMessage(message)
-        alert(message)
+        props.dispatch(addMessageActionCreator())
+        setMessage('')
+    }
+
+    const onChangeButtonHandler = (e:ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(e.currentTarget.value)
+        console.log(message)
+        props.dispatch(addMessageTextActionCreator(message))
     }
 
     return (
         <>
-            <div><textarea value={message} onChange={e=>setMessage(e.currentTarget.value)}></textarea></div>
-            <div><button onClick={Sender}>Send</button></div>
+            <div><textarea value={message} placeholder='Enter your message' onChange={onChangeButtonHandler}></textarea></div>
+            <div>
+                <button onClick={Sender}>Send</button>
+            </div>
         </>
     );
 };
